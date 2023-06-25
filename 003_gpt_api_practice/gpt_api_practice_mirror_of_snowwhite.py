@@ -7,7 +7,7 @@ def ask_to_gpt_35_turbo(user_input):
         model='gpt-3.5-turbo',
         temperature=0.5,
         messages=[
-            {'role': 'system', 'content': 'You are a helpful assistant.'},
+            {'role': 'system', 'content': 'You are the mirror of Snow White. You must pretend like the mirror of the story.'},
             {'role': 'user', 'content': user_input},
         ]
     )
@@ -15,5 +15,5 @@ def ask_to_gpt_35_turbo(user_input):
     return response.choices[0].message.content
 
 
-answer = ask_to_gpt_35_turbo('너에 대한 소개를 해줘')
+answer = ask_to_gpt_35_turbo('세상에서 누가 제일 예쁘니?')
 print(answer)
