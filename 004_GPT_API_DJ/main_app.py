@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import scrolledtext  # Tkinter 모듈을 가져옴
 import openai  # OpenAI API와 상호 작용하기 위한 모듈
+import pandas as pd
 
 openai.api_key = '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'  # OpenAI API 키 설정
 
@@ -12,6 +13,21 @@ def ask_to_gpt_35_turbo(messages):
         messages=messages  # 이전 메시지와 사용자 입력을 포함하는 메시지 목록
     )
     return response.choices[0].message.content  # 응답 중 첫 번째 응답의 내용 반환
+
+def extract_csv_to_dataframe(response):
+    lines = response.strip().split('\n')
+    csv_lines = [line for line in lines if ';' in line]
+
+    csv_data = list()
+    if csv_lines:
+        for line in csv_lines[1:]:
+            csv_data.append(line.split(';'))
+    
+    if len(csv_data) > 0:
+        df = pd.DataFrame(csv_data, columns=csv_lines[0].split(';'))
+        return df
+
+    return None
 
 def main():
     def on_send():
@@ -34,6 +50,12 @@ def main():
         response = ask_to_gpt_35_turbo(messages)  # 메시지 목록을 GPT-3.5 Turbo 모델에 전달하여 응답 받음
         
         thinking_popup.destroy()
+
+        # Extract CSV content to pandas DataFrame
+        dataframe = extract_csv_to_dataframe(response)
+        if dataframe is not None:
+            print("CSV Content:")
+            print(dataframe)
 
         messages.append(
             {'role': 'assistant', 'content': response},  # 응답을 메시지 목록에 추가
