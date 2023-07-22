@@ -1,4 +1,4 @@
-Title;Artist;Release Year;mp3_file;image_file
-Shape of You;Ed Sheeran;2017;./music_files/Shape_of_You__Ed_Sheeran.mp3;./dreamlike_diffusion/Shape_of_You_Ed_Sheeran.jpg
-Can't Stop the Feeling!;Justin Timberlake;2016;./music_files/Cant_Stop_the_Feeling__Justin_Timberlake.mp3;./dreamlike_diffusion/Cant_Stop_the_Feeling_Justin_Timberlake.jpg
-Happy;Pharrell Williams;2013;./music_files/Happy__Pharrell_Williams.mp3;./dreamlike_diffusion/Happy_Pharrell_Williams.jpg
+Title;Artist;Release Year;mp3_file;image_file;info_image_file
+Shape of You;Ed Sheeran;2017;./music_files/Shape_of_You__Ed_Sheeran.mp3;./dreamlike_diffusion/Shape_of_You_Ed_Sheeran.jpg;./dreamlike_diffusion/Shape_of_You_Ed_Sheeran_info.jpg
+Can't Stop the Feeling!;Justin Timberlake;2016;./music_files/Cant_Stop_the_Feeling__Justin_Timberlake.mp3;./dreamlike_diffusion/Cant_Stop_the_Feeling_Justin_Timberlake.jpg;./dreamlike_diffusion/Cant_Stop_the_Feeling_Justin_Timberlake_info.jpg
+Happy;Pharrell Williams;2013;./music_files/Happy__Pharrell_Williams.mp3;./dreamlike_diffusion/Happy_Pharrell_Williams.jpg;./dreamlike_diffusion/Happy_Pharrell_Williams_info.jpg

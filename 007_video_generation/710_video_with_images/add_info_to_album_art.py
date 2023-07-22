@@ -51,11 +51,16 @@ def create_album_art(image_path, title, artist):
 
     dir, file_full_name = os.path.split(image_path)
     file_name, ext = os.path.splitext(file_full_name)
-    
-    img.save(f"{dir}/{file_name}_info{ext}")
+    info_image_file_path = f"{dir}/{file_name}_info{ext}"
 
-create_album_art(
-    "dreamlike_diffusion\Thinking_Out_Loud_Ed_Sheeran.jpg", 
-    "Thinking Out Loud", 
-    "Ed Sheeran"
-)
+    img.save(info_image_file_path)
+
+    return info_image_file_path
+
+
+if __name__ == '__main__':
+    create_album_art(
+        "dreamlike_diffusion\Thinking_Out_Loud_Ed_Sheeran.jpg", 
+        "Thinking Out Loud", 
+        "Ed Sheeran"
+    )
