@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 ffmpeg-2023-07-06-git-f00222e81f-full_build/
 music_files/
+videos/
