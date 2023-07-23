@@ -163,3 +163,5 @@ music_files/
 videos/
 
 raw_video/
+*.mp4
+*.MP4
