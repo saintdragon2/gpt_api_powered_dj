@@ -1,0 +1,4 @@
+Title;Artist;Release Year;mp3_file;image_file;info_image_file
+Sunday Morning;Maroon 5;2004;./music_files/Sunday_Morning__Maroon_5.mp3;./dreamlike_diffusion/Sunday_Morning_Maroon_5.jpg;./dreamlike_diffusion/Sunday_Morning_Maroon_5_info.jpg
+Walking on Sunshine;Katrina and The Waves;1983;./music_files/Walking_on_Sunshine__Katrina_and_The_Waves.mp3;./dreamlike_diffusion/Walking_on_Sunshine_Katrina_and_The_Waves.jpg;./dreamlike_diffusion/Walking_on_Sunshine_Katrina_and_The_Waves_info.jpg
+Happy;Pharrell Williams;2013;./music_files/Happy__Pharrell_Williams.mp3;./dreamlike_diffusion/Happy_Pharrell_Williams.jpg;./dreamlike_diffusion/Happy_Pharrell_Williams_info.jpg
