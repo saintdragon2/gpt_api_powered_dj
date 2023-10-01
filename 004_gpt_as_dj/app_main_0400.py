@@ -5,7 +5,7 @@ import openai  # OpenAI API와 상호 작용하기 위한 모듈
 ## 폰트와 줄간격 정의한 버전
 ## 함수명도 헷갈리지 않게 수정
 
-openai.api_key = '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'  # OpenAI API 키 설정
+openai.api_key = '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'  # OpenAI API 키 설정
 
 def ask_to_gpt_35_turbo(messages):
     # GPT-3.5 Turbo 모델에 메시지를 보내 응답을 받는 함수
