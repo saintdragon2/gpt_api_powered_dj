@@ -11,7 +11,7 @@ def ask_to_gpt_35_turbo(messages):
     # GPT-3.5 Turbo 모델에 메시지를 보내 응답을 받는 함수
     response = openai.ChatCompletion.create(
         model='gpt-3.5-turbo',  # 사용할 모델 선택
-        temperature=0.5,  # 출력 다양성 조절을 위한 옵션
+        temperature=0.1,  # 출력 다양성 조절을 위한 옵션
         messages=messages  # 이전 메시지와 사용자 입력을 포함하는 메시지 목록
     )
     return response.choices[0].message.content  # 응답 중 첫 번째 응답의 내용 반환
@@ -77,7 +77,7 @@ def main():
         return popup
 
     window = tk.Tk()  # Tkinter의 기본 윈도우를 생성
-    window.title("Chat with GPT-3.5 Turbo")  # 윈도우 제목 설정
+    window.title("GPT Powered DJ")  # 윈도우 제목 설정
     font = ('맑은 고딕', 10)
 
     conversation = scrolledtext.ScrolledText(window, wrap=tk.WORD, state=tk.DISABLED, font=font)  # 채팅 히스토리를 보여주기 위한 텍스트 위젯 생성
@@ -98,7 +98,11 @@ def main():
     window.bind('<Return>', lambda event: on_send())
 
     messages = [
-        {'role': 'system', 'content': 'You are a helpful assistant.'},  # 초기 시스템 메시지를 메시지 목록에 추가
+        {'role': 'system', 'content': """
+         You are a DJ assistant who creates playlists. Your user will be Korean, so you should communicate in Korean, but you must not translate artists' names and song titles into Korean.
+         - When you show a playlist, it must contains the title, artist, and release year of each song in a list format. You must ask the user if they want to save the playlist as follow: "이 플레이리스트를 CSV로 저장하시겠습니까?".
+         - If they want to save the playlist into CSV, show the playlist with a header in CSV format, seperated by ';' and the release year foramt should be 'YYYY'. The CSV format must start with a new line. The header of the CSV file must be in English and it should be formatted as follows: 'Title;Artist;Released'.
+         """}, 
     ]
 
     window.mainloop()  # Tkinter 윈도우 이벤트 루프 실행
