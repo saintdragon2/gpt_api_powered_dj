@@ -1,6 +1,6 @@
-Title;Artist;Released;mp3
-내 마음에 주단을 깔고;신해철;1986;None
-눈물의 파티;산울림;1981;None
-나만의 슬픔;김완선;1987;./mp3/나만의_슬픔-김완선.mp3
-키다리 아저씨;김현식;1986;None
-빨간 맛;서태지와 아이들;1988;None
+Title;Artist;Released;mp3;image_file
+내 마음에 주단을 깔고;신해철;1986;Not found;
+눈물의 파티;산울림;1981;Not found;
+나만의 슬픔;김완선;1987;./mp3/나만의_슬픔-김완선.mp3;./dreamlike_diffusion/나만의_슬픔_김완선.jpg
+키다리 아저씨;김현식;1986;Not found;
+빨간 맛;서태지와 아이들;1988;Not found;
