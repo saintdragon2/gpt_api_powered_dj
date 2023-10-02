@@ -5,6 +5,7 @@ import openai  # OpenAI API와 상호 작용하기 위한 모듈
 from api_keys import openai_api_key
 import tkinter.filedialog as filedialog
 from youtube_audio_download import download_music_from_youtube
+from generate_image import generate_images_for_songs
 import pandas as pd
 
 # CSV 저장하기
@@ -52,6 +53,7 @@ def ask_to_gpt_35_turbo(messages, functions, model='gpt-3.5-turbo', temperature=
         available_functions = {
             "save_playlist_as_csv": save_playlist_as_csv,
             "download_music_from_youtube": download_music_from_youtube,
+            "generate_images_for_songs": generate_images_for_songs,
         }
         
         function_name = response_message["function_call"]["name"]
@@ -164,6 +166,7 @@ def main():
          You are a DJ assistant who creates playlists. Your user will be Korean, so you should communicate in Korean, but you must not translate artists' names and song titles into Korean.
          - At first, suggest songs to make a playlist based on users' request. The playlist must contains the title, artist, and release year of each song in a list format. You must ask the user if they want to save the playlist as follow: "이 플레이리스트를 CSV로 저장하시겠습니까?".
          - After saving the playlist as a CSV file, you must ask the users if they would like to download the MP3 files of the songs in the playlist.
+         - After downloading the mp3 files in the playlist, you must ask the users if they would like to generate album cover images for the songs.
          """}, 
     ]
 
@@ -185,6 +188,20 @@ def main():
         {
             "name": "download_music_from_youtube",
             "description": "Download mp3 of songs in the recent CSV file",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "csv_file": {
+                        "type": "string",
+                        "description": "The recent csv file path",
+                    },
+                },
+                "required": ["csv_file"],
+            },
+        },
+        {
+            "name": "generate_images_for_songs",
+            "description": "Generate images for the songs in the recent CSV file. This function can be used only after downloading mp3 files",
             "parameters": {
                 "type": "object",
                 "properties": {

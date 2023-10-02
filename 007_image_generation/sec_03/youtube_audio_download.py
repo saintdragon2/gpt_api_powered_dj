@@ -80,6 +80,9 @@ def download_music_from_youtube(csv_file):
     df = pd.read_csv(csv_file, delimiter=';', encoding='UTF-8')
 
     mp3s = []
+
+    result_str = 'mp3 다운로드를 완료했습니다.'
+
     # YouTube 검색 및 음원 다운로드
     for index, row in df.iterrows():
         title = row['Title']
@@ -87,12 +90,17 @@ def download_music_from_youtube(csv_file):
 
         mp3_file_path = download_song(title, artist)
         mp3s.append(mp3_file_path)
+        result_str += f'\n {title} - {artist} : {mp3_file_path}'
     
     df['mp3'] = mp3s
     df = df.fillna('Not found')
     print(df)
 
     df.to_csv(csv_file, index=False, encoding='UTF-8', sep=';')
+
+    print(result_str)
+    return result_str
+
         
 
 if __name__ == '__main__':
