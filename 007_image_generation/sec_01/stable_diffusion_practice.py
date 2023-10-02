@@ -1,0 +1,12 @@
+from diffusers import StableDiffusionPipeline
+import torch
+
+model_id = "runwayml/stable-diffusion-v1-5"
+pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+pipe = pipe.to("cuda")
+
+# prompt = "a photo of an astronaut riding a horse on mars"
+prompt = '"Beat It" by Michael Jackson is an energetic pop/rock song with lyrics about standing up against violence and conflict, creating a powerful and determined mood.'
+image = pipe(prompt).images[0]  
+    
+image.save("beat_it_MJ.png")
