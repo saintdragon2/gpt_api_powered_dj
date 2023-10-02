@@ -46,8 +46,8 @@ def generate_dalle_image(prompt, image_file_name, size="512x512"):
 
 
 if __name__ == '__main__':
-    song_title = 'Billie Jean'
-    artist = 'Michael Jackson'
+    song_title = 'Yesterday'
+    artist = 'Beatles'
 
     prompt = text_to_image_prompt_generator(song_title, artist)
     print(prompt)
