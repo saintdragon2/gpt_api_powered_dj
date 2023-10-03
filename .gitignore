@@ -162,3 +162,4 @@ cython_debug/
 api_keys.py
 ffmpeg-2023-09-29-full_build/
 *.mp3
+*.mp4
