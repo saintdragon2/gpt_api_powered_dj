@@ -1,6 +1,6 @@
-Title;Artist;Released;mp3;image_file
-Dynamite;방탄소년단;2020;./mp3/Dynamite-방탄소년단.mp3;./dreamlike_diffusion/Dynamite_방탄소년단.jpg
-Gangnam Style;PSY;2012;./mp3/Gangnam_Style-PSY.mp3;./dreamlike_diffusion/Gangnam_Style_PSY.jpg
-Uptown Funk;Mark Ronson ft. Bruno Mars;2014;./mp3/Uptown_Funk-Mark_Ronson_ft._Bruno_Mars.mp3;./dreamlike_diffusion/Uptown_Funk_Mark_Ronson_ft._Bruno_Mars.jpg
-Shape of You;Ed Sheeran;2017;./mp3/Shape_of_You-Ed_Sheeran.mp3;./dreamlike_diffusion/Shape_of_You_Ed_Sheeran.jpg
-Sorry;Justin Bieber;2015;./mp3/Sorry-Justin_Bieber.mp3;./dreamlike_diffusion/Sorry_Justin_Bieber.jpg
+Title;Artist;Released;mp3;image_file;info_image_file
+Dynamite;방탄소년단;2020;./mp3/Dynamite-방탄소년단.mp3;./dreamlike_diffusion/Dynamite_방탄소년단.jpg;./dreamlike_diffusion/Dynamite_방탄소년단__info.jpg
+Gangnam Style;PSY;2012;./mp3/Gangnam_Style-PSY.mp3;./dreamlike_diffusion/Gangnam_Style_PSY.jpg;./dreamlike_diffusion/Gangnam_Style_PSY__info.jpg
+Uptown Funk;Mark Ronson ft. Bruno Mars;2014;./mp3/Uptown_Funk-Mark_Ronson_ft._Bruno_Mars.mp3;./dreamlike_diffusion/Uptown_Funk_Mark_Ronson_ft._Bruno_Mars.jpg;./dreamlike_diffusion/Uptown_Funk_Mark_Ronson_ft._Bruno_Mars__info.jpg
+Shape of You;Ed Sheeran;2017;./mp3/Shape_of_You-Ed_Sheeran.mp3;./dreamlike_diffusion/Shape_of_You_Ed_Sheeran.jpg;./dreamlike_diffusion/Shape_of_You_Ed_Sheeran__info.jpg
+Sorry;Justin Bieber;2015;./mp3/Sorry-Justin_Bieber.mp3;./dreamlike_diffusion/Sorry_Justin_Bieber.jpg;./dreamlike_diffusion/Sorry_Justin_Bieber__info.jpg
